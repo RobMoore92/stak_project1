@@ -235,6 +235,9 @@ font-size: 12px;
     margin-left: 30px;
 }
 
+.reference_list {
+    margin-top: -20px;
+}
 .popup {
     text-align: center;
 }

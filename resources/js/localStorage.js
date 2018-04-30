@@ -71,3 +71,11 @@ function saveProject() {
     localStorage.setItem('title', title);
    localStorage.setItem('due_date', due_date);
 }
+
+function loadReference() {
+    var test = window.getSelection().toString();
+    var keyname = 'value' + keyname.localStorage.length;
+    localStorage.setItem(keyname, 'test');
+    alert(test);
+
+}
