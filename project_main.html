@@ -44,7 +44,7 @@
                     <a class="nav-link" href="open_project.html">open <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="save_page.html">save <span class="sr-only"></span></a>
+                    <a class="nav-link" onclick="save()" href="save_page.html">save <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">import <span class="sr-only"></span></a>
@@ -68,17 +68,28 @@
     </div>
     <div class="container">
         <div class="row">
-
-            <div class="col-4 top-btn"><button type="button" onclick="requirements()" class="nav-btn btn btn-outline-dark">Requirements</button></div>
-            <div class="col-4 top-btn"><button type="button" onclick="calendar()" class="nav-btn btn btn-outline-dark">Calendar</button></div>
-            <div class="col-4 top-btn"><button type="button" onclick="tools()" class="nav-btn btn btn-outline-dark">Tools</button></div>
+            <div class="col-4 center-block"><button type="button" onclick="requirements()" class="nav-btn btn btn-outline-dark top-btn ">Requirements</button></div>
+            <div class="col-4 center-block"><button type="button" onclick="calendar()" class="nav-btn btn btn-outline-dark top-btn">Calendar</button></div>
+            <div class="col-4 center-block"><button type="button" onclick="tools()" class="nav-btn btn btn-outline-dark top-btn">Tools</button>
+            </div>
+        </div>
+        <div class="row" id="tool_popup">
+            <div class="col-4 popup"><button type="button" onclick="" class="nav-btn btn btn-outline-dark top-btn ">Summarize</button></div>
+            <div class="col-4 popup "><button type="button" onclick="" class="nav-btn btn btn-outline-dark top-btn ">Plagurism</button></div>
+            <div class="col-4 popup"><button type="button" onclick="" class="nav-btn btn btn-outline-dark top-btn ">References</button></div>
+        </div>
+        <div class="row" id="tool_popup">
+            <div class="col-4 popup"><button type="button" onclick="" class="nav-btn btn btn-outline-dark top-btn ">Summarize</button></div>
+            <div class="col-4 popup "><button type="button" onclick="" class="nav-btn btn btn-outline-dark top-btn ">Plagurism</button></div>
+            <div class="col-4 popup"><button type="button" onclick="" class="nav-btn btn btn-outline-dark top-btn ">References</button></div>
         </div>
     </div>
+
 
     <div class="container">
         <div class="row">
             <div class="col-sm-12" id="insert_nav">
-     <iframe id = "calendar_hide"src="https://calendar.google.com/calendar/embed?showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=180&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=fl7qel7q2h208cag30gqpg4pq4%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=Australia%2FDarwin" style="border:solid 1px #777" width="250" height="180" frameborder="0" scrolling="no"></iframe>
+                <iframe id="calendar_hide" src="https://calendar.google.com/calendar/embed?showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=180&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=fl7qel7q2h208cag30gqpg4pq4%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=Australia%2FDarwin" style="border:solid 1px #777" width="250" height="180" frameborder="0" scrolling="no"></iframe>
                 <ul class="view_toggle" id='req_list'></ul>
             </div>
         </div>
@@ -86,21 +97,35 @@
             <div class="col-sm-12 ">
 
                 <div class="main_screen">
-                    <textarea name="Text1" id="textbox" cols="40" rows="5">This is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and looked through to find a specific highlight entry.</textarea>
+                    <textarea name="Text1" id="textbox" cols="40" rows="5">This is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a high is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and light group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  is an example text. The reading summary would appear on the lines like this. You can add snippets to a highlight group like this, or like this. These groups live under this text at the botton. Each group can be opened and  looked through to find a specific highlight entry.</textarea>
                 </div>
 
             </div>
+            <div class="row">
+                <div class="col-sm-12 summarize">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 plagurism">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 summarize">
+
+                </div>
+            </div>
         </div>
-    </div>
 
 
-    <!-- Bootstrap core JavaScript
+        <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="resources/js/top_nav.js"></script>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="resources/js/top_nav.js"></script>
 </body>
 
 </html>
