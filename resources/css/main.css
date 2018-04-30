@@ -123,6 +123,10 @@ nav-bar li {
     padding: 0px 5px 0px 5px;
 }
 
+.requirements {
+    display: block;
+}
+
 .btn-light {
     width: 100%;
     display:

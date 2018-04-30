@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-
+    <script src="resources/js/project_main.js"></script>
     <title>STAK | Study Tool</title>
     <script src="resources/js/localStorage.js"></script>
     <!-- Bootstrap core CSS -->
@@ -20,7 +20,7 @@
 </head>
 
 
-<body class="bg-light">
+<body class="bg-light" onload = loadProject()>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.html">
             <div class="row">
@@ -62,15 +62,15 @@
         </div>
     </nav>
     <div class="container">
-        <h3>Reading 3: <span class="thin_text">The History of Design</span></h3>
-        <p><span class="bold">DUE:</span> 1 Day</p>
+        <h3 id=title1>Reading 3: <span class="thin_text">The History of Design</span></h3>
+        <p id="due_date1"><span class="bold">DUE:</span> 1 Day</p>
         <div class="line-break"></div>
     </div>
     <div class="container">
         <div class="row">
 
             <div class="col-4 top-btn"><button  type="button" onclick="requirements()" class="nav-btn btn btn-outline-dark">Requirements</button></div>
-            <div class="col-4 top-btn"><button type="button" onclick="calendar()" class="nav-btn btn btn-outline-dark">Calendar</button></div>
+            <div class="col-4 top-btn"><button type="button" onclick="calendar()" class="nav-btn btn btn-outline-dark">Calendar</button><iframe id="calendar_hide" src="https://calendar.google.com/calendar/embed?src=fl7qel7q2h208cag30gqpg4pq4%40group.calendar.google.com&ctz=Australia%2FDarwin" style="border: 0" width="250" height="180" frameborder="0" scrolling="no" display: none></iframe></div>
             <div class="col-4 top-btn"><button type="button" onclick="tools()" class="nav-btn btn btn-outline-dark">Tools</button></div>
         </div>
     </div>
