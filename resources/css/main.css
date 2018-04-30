@@ -97,6 +97,10 @@ nav-bar li {
     font-family: 'Roboto', sans-serif;
 }
 
+#calendar_hide {
+    display: none;
+}
+
 .small_title h1 {
     padding-top: 12px;
     padding-left: 15px;
