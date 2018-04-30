@@ -1,5 +1,4 @@
 function loadProject(){
-    alert('test121');
     var new_title = localStorage.getItem("title");
     var new_due = localStorage.getItem("due_date");
     var title = document.getElementById('title1');
