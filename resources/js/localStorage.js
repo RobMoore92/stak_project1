@@ -13,8 +13,11 @@ function requirements() {
 
 function calendar() {
     var x = document.getElementById("calendar_hide");
+    var y = document.getElementById('req_list');
+            y.style.display = "none";
     if (x.style.display === "block") {
-        x.style.display = "none";
+        x.style.display = "none";       
+
     } else {
         x.style.display = "block";
 
@@ -24,6 +27,8 @@ function calendar() {
 
 function toggler() {
     var x = document.getElementById("req_list");
+    var y = document.getElementById("calendar_hide");
+    y.style.display = "none"
     if (x.style.display === "block") {
         x.style.display = "none";
     } else {
