@@ -176,7 +176,6 @@ function summarizedTexts() {
 }
 
 function openImage() {
-    alert("test");
     var elem = document.createElement("img");
     elem.setAttribute("src", "resources/img/camera.jpg");
 document.getElementById("imageholder").appendChild(elem);
