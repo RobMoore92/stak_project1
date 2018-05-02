@@ -12,7 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="venders/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-
+    <script src="resources/js/localStorage.js"></script>
     <!-- Custom Style -->
     <link href='resources/css/main.css' rel="stylesheet">
 
@@ -21,24 +21,24 @@
 
 
 
-<body class="bg-light">
+<body onload="recentProjects()" class="bg-light">
 
     <div class="container">
         <div class="row">
-            <div class="main_title col-xs-12 ">
+            <div class="main_title col-xs-12">
                 <h1>Stak</h1>
                 <p>Study Tool</p>
                 <img src="resources/img/logo.png" alt="logos" height="100" width="100">
             </div>
         </div>
     </div>
-    
+
     <div class="container">
         <div class="row">
-            <div class="new_project col-sm-6">
+            <div class= "new_project col-sm-6">
                 <div class="card">
                     <a href="new_project.html">
-                    <p class="align-middle">New Project</p>
+                    <p>New Project</p>
                     </a>
                 </div>
             </div>
@@ -50,14 +50,14 @@
                     </a>
             </div>
         </div>
+        </div>
+        <div class="container">
         <div class="row">
-            <div class="recent_projects col-sm-12 fixed-bottom">
+            <div class="col-sm-12">
                 <h2>Recent Projects</h2>
                 <div class="line-break"></div>
-                <ul>
-                    <li>Assignment 1: Cultural Intelligence</li>
-                    <li>Reading 3: The History of Design</li>
-                    <li>Summary 2</li>
+                <ul >
+                    <a href="project_main.html"<li id="recent-project" class="align-left"></li></a>
                 </ul>
             </div>
         </div>
