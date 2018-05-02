@@ -174,3 +174,25 @@ function summarizedTexts() {
     var summary = document.getElementById('summary-text');
     summary.innerHTML = "SUMMARIZED TEXT: 'Roger Sipher makes his case for getting rid of compulsory-attendance laws in primary and secondary schools with six arguments. These fall into three groups—first that education is for those who want to learn and by including those that don't want to learn, everyone suffers. Second, that grades would be reflective of effort and elementary school teachers wouldn't feel compelled to pass failing students. Third, that schools would both save money and save face with the elimination of compulsory-attendance laws.'"
 }
+
+function openImage() {
+    alert("test");
+    var elem = document.createElement("img");
+    elem.setAttribute("src", "resources/img/camera.jpg");
+document.getElementById("imageholder").appendChild(elem);
+}
+
+function scanFile(){
+    var text = "The scan tool can scan written text and import it to the project area";
+    localStorage.setItem("scan", text);
+}
+
+function retrieveScan(){
+    var text = localStorage.getItem("scan");
+        var summary = document.getElementById('summary-text');
+    if (text === null) {
+        alert("no scan found");
+    } else {
+         var reference = document.getElementById("textbox").value += text;
+    }
+}
