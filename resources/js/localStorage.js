@@ -106,7 +106,7 @@ function loadProject() {
 
 function save() {
     var textbox = document.getElementById('textbox');
-    localStorage.setItem('referenceText', textbox.value);
+    localStorage.setItem('referenceText', textbox.innerHTML);
 
 }
 
@@ -219,7 +219,7 @@ function retrieveScan(){
     var text = localStorage.getItem("scan");
         var summary = document.getElementById('summary-text');
     if (text === null) {
-        alert("No scan found");
+        alert("No scan found, scan a file in the 'Scan Page' in the navigation.");
     } else {
          var reference = document.getElementById("textbox").innerHTML += '<br><br>' + '<p class="bold">Retrieved text from scan</p>' + text;
     }
