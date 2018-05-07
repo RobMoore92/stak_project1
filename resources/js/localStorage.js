@@ -174,6 +174,8 @@ function plagurismList() {
 }
 
 function plagiarismCheck(){
+    var danger = document.getElementById('warning');
+    danger.play();
     var text1 = document.getElementById('plag');
     text1.style.color = "red";
 }
