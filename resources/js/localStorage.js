@@ -103,24 +103,39 @@ function saveas() {
 alert(test);
 }
 
-function tools_hide() {
-    var x = document.getElementById("tool_popup");
-    if (x.style.display === "inline-flex") {
+function snippets_hide() {
+    var y = document.getElementById("tool_popup");
+          var x = document.getElementById("snippets_popup");
+    if (x.style.display === "inline") {
         x.style.display = "none";
+        y.style.display = "none";
 
     } else {
-        x.style.display = "inline-flex";
+        x.style.display = "inline";
+    }
+}
 
+function tools_hide() {
+    var x = document.getElementById("tool_popup");
+          var y = document.getElementById("snippets_popup");
+    if (x.style.display === "inline") {
+        x.style.display = "none";
+                y.style.display = "none";
+
+    } else {
+        x.style.display = "inline";
+        y.style.display = "none";
     }
 }
 
 function referenceList() {
     var x = document.getElementById("reference-hide");
-    if (x.style.display === "inline-flex") {
+    if (x.style.display === "inline") {
         x.style.display = "none";
 
     } else {
-        x.style.display = "inline-flex";
+             x.style.display = "inline";
+        y.style.display = "none";
 
     }
 }
@@ -167,12 +182,13 @@ function recentProjects() {
   }
 
 function summarize() {
-        var reference = document.getElementById("textbox").value += "SUMMARIZED TEXT: 'Roger Sipher makes his case for getting rid of compulsory-attendance laws in primary and secondary schools with six arguments. These fall into three groups—first that education is for those who want to learn and by including those that don't want to learn, everyone suffers. Second, that grades would be reflective of effort and elementary school teachers wouldn't feel compelled to pass failing students. Third, that schools would both save money and save face with the elimination of compulsory-attendance laws.'";
+        var reference = document.getElementById("textbox");
+        reference.innerHTML += "<br><br>" + "SUMMARIZED TEXT: There are two types of auctions: those in which the price starts out low and is gradually raised, and those in which the price starts out high and is gradually lowered. <br><br> Auctions can be conducted in open or closed formats. <br> <br> Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount. <br><br>Auctions can be conducted in open or closed formats. <br><br>Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount.";
 }
 
 function summarizedTexts() {
     var summary = document.getElementById('summary-text');
-    summary.innerHTML = "SUMMARIZED TEXT: 'Roger Sipher makes his case for getting rid of compulsory-attendance laws in primary and secondary schools with six arguments. These fall into three groups—first that education is for those who want to learn and by including those that don't want to learn, everyone suffers. Second, that grades would be reflective of effort and elementary school teachers wouldn't feel compelled to pass failing students. Third, that schools would both save money and save face with the elimination of compulsory-attendance laws.'"
+    summary.innerHTML ="<br><br>" + "SUMMARIZED TEXT: There are two types of auctions: those in which the price starts out low and is gradually raised, and those in which the price starts out high and is gradually lowered. <br><br> Auctions can be conducted in open or closed formats. <br> <br> Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount. <br><br>Auctions can be conducted in open or closed formats. <br><br>Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount.";
 }
 
 function openImage() {
