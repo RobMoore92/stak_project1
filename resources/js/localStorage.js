@@ -59,7 +59,7 @@ function loadReqs() {
 
             } else {
                 var item_empty = document.createElement("li");
-                item_empty.innerHTML = '-';
+                item_empty.innerHTML = '    ';
                 origin.appendChild(item_empty);
             }
         }
@@ -81,6 +81,8 @@ function addReferenceText() {
 function addReferenceUrl(){
         var url = document.getElementById('urlInput').value;
         localStorage.setItem('referenceUrl', url);
+       var ding = document.getElementById('ding');
+    ding.play()
 }
 
 
@@ -89,8 +91,17 @@ function loadProject() {
     var new_due = localStorage.getItem("due_date");
     var title = document.getElementById('title1');
     var due = document.getElementById('due_date1');
-    title.innerHTML = (new_title);
+    if (title.innerHTML === null) {
+        
+    } else {
+    title.innerHTML = ('Title: ' + new_title);
+    }
+    
+    if (due.innerHTML === null) {
+        due.innerHTML = ('No due date set');
+    } else {
     due.innerHTML = ('Due: ' + new_due);
+    }
 }
 
 function save() {
@@ -112,6 +123,7 @@ function snippets_hide() {
 
     } else {
         x.style.display = "inline";
+                y.style.display = "none";
     }
 }
 
@@ -161,15 +173,11 @@ function plagurismList() {
     }
 }
 
-function plagurismLoad(){
-  var refUrl = localStorage.getItem("referenceUrl");
-    var refText = localStorage.getItem("reference");
-    var originUrl = document.getElementById('reference-url');
-    var originText = document.getElementById('reference-text');
-
-    originUrl.innerHTML = refUrl;
-    originText.innerHTML = refText;
+function plagiarismCheck(){
+    var text1 = document.getElementById('plag');
+    text1.style.color = "red";
 }
+
 
 function recentProjects() {
   var title = localStorage.getItem('title');
@@ -182,13 +190,16 @@ function recentProjects() {
   }
 
 function summarize() {
+        var ding = document.getElementById('ding');
+    ding.play();
         var reference = document.getElementById("textbox");
-        reference.innerHTML += "<br><br>" + "SUMMARIZED TEXT: There are two types of auctions: those in which the price starts out low and is gradually raised, and those in which the price starts out high and is gradually lowered. <br><br> Auctions can be conducted in open or closed formats. <br> <br> Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount. <br><br>Auctions can be conducted in open or closed formats. <br><br>Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount.";
+        reference.innerHTML += "<br><br>" + "<p class='bold'>SUMMARIZED TEXT:</p>  There are two types of auctions: those in which the price starts out low and is gradually raised, and those in which the price starts out high and is gradually lowered. <br><br> Auctions can be conducted in open or closed formats. <br> <br> Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount. <br><br>Auctions can be conducted in open or closed formats. <br><br>Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount.";
 }
 
 function summarizedTexts() {
+
     var summary = document.getElementById('summary-text');
-    summary.innerHTML ="<br><br>" + "SUMMARIZED TEXT: There are two types of auctions: those in which the price starts out low and is gradually raised, and those in which the price starts out high and is gradually lowered. <br><br> Auctions can be conducted in open or closed formats. <br> <br> Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount. <br><br>Auctions can be conducted in open or closed formats. <br><br>Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount.";
+    summary.innerHTML ="<br><br>" + "There are two types of auctions: those in which the price starts out low and is gradually raised, and those in which the price starts out high and is gradually lowered. <br><br> Auctions can be conducted in open or closed formats. <br> <br> Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount. <br><br>Auctions can be conducted in open or closed formats. <br><br>Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount.";
 }
 
 function openImage() {
@@ -203,11 +214,13 @@ function scanFile(){
 }
 
 function retrieveScan(){
+    var ding = document.getElementById('ding');
+    ding.play();
     var text = localStorage.getItem("scan");
         var summary = document.getElementById('summary-text');
     if (text === null) {
-        alert("no scan found");
+        alert("No scan found");
     } else {
-         var reference = document.getElementById("textbox").value += text;
+         var reference = document.getElementById("textbox").innerHTML += '<br><br>' + '<p class="bold">Retrieved text from scan</p>' + text;
     }
 }

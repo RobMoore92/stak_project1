@@ -55,15 +55,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="project_main.html">project <span class="sr-only"></span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="assets.html">assets <span class="sr-only"></span></a>
-                </li>
 
             </ul>
         </div>
     </nav>
     <div class="container">
-        <h3 id=title1><span class="thin_text"></span></h3>
+        <p id=title1><span class="thin_text"></span></p>
         <p id="due_date1"></p>
         <div class="line-break"></div>
     </div>
@@ -95,10 +92,11 @@
                 <button type="button" onclick="summarize()" class="btn top-btn">Summarize</button>
             </div>
             <div class="col-3-sm mx-auto">
-                <button type="button" class="btn top-btn" data-toggle="modal" data-target="#plagiarism">Plagiarism Check</button>
+                <button type="button" class="btn top-btn" onclick="plagiarismCheck()" data-toggle="modal" data-target="#plagiarism">Plagiarism Check</button>
             </div>
             <div class="col-3-sm mx-auto">
-                <button type="button" class="btn top-btn" onclick="addReferenceText()" data-toggle="modal" data-target="#addReference">Add Reference</button>
+       
+                <button type="button" class="btn top-btn" onclick="addReferenceText()" data-toggle="modal" data-target="#addReference"><audio src="resources/audio/ding.mp3" id="ding"></audio>Add Reference</button>
             </div>
             <div class="col-3-sm mx-auto">
                 <button type="button" class="btn top-btn" onclick="retrieveScan()">Retrieve Scan</button>
@@ -126,7 +124,8 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content mt-3">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"></h5> <label for="example-text-input" class="col-2 col-form-label">Warning!</label>
+                    <h3 class="modal-title" id="exampleModalLabel">Warning!</h3> 
+                     <audio src="resources/audio/warning.mp3" id="warning"></audio>
                     <div class="col-10">
                         <ul>
                             <li class="small" id="plagiarism-url"><a href="https://enginess.io/insights/6-principles-design-la-donald-norman">https://enginess.io/insights/6-principles-design-la-donald-norman</a></li>
@@ -155,7 +154,9 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" onclick="addReferenceUrl()" data-dismiss="modal">Close</button>
+                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" onclick="addReferenceUrl()" data-dismiss="modal">Save</button>
+ 
                 </div>
             </div>
         </div>
@@ -204,7 +205,26 @@
             </div>
         </div>
     </div>
-            
+                        <div class="modal fade" id="summarized-texts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content mt-3">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Summarized Texts</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li class="lead" id="reference-url"> There are two types of auctions: those in which the price starts out low and is gradually raised, and those in which the price starts out high and is gradually lowered. <br><br> Auctions can be conducted in open or closed formats. <br> <br> Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount. <br><br>Auctions can be conducted in open or closed formats. <br><br>Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount."</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div class="modal fade" id="summarized-texts" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content mt-3">
@@ -233,7 +253,8 @@
             <div class="col-sm-12">
                 <div class="main_screen">
                     <div id='fake_textarea' contenteditable><p id="textbox"><span class="bold">Example Summary - Highlight the text and press Summarize in the Tools section.</span><br><br>
-                        There are two types of auctions: those in which the price starts out low and is gradually raised, and those in which the price starts out high and is gradually lowered. Both auction types have variants, such as a "buyout option" in which a customer is guaranteed an object if he/she is willing to pay a high price. Moreover, auctions can be conducted in open or closed formats. In closed formats, participants don't know how much others are willing to pay for an object since they use sealed envelopes or some secret method to make their bids. Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount.</p>
+                        There are two types of auctions: those in which the price starts out low and is gradually raised, and those in which the price starts out high and is gradually lowered. Both auction types have variants, such as a "buyout option" in which a customer is guaranteed an object if he/she is willing to pay a high price. Moreover, auctions can be conducted in open or closed formats. In closed formats, participants don't know how much others are willing to pay for an object since they use sealed envelopes or some secret method to make their bids. Though open auctions often result in higher sale prices, closed formats are sometimes preferred when privacy or the need for documentation is paramount.<br><br><span class="bold">Plagurism Example:</span><br><br><span id="plag">Norman outlines six key principles: visibility, feedback, constraints, mapping, consistency and affordances.</span></p>
+                
 </div>
                 </div>
             </div>

@@ -3,14 +3,22 @@ bdy {
     margin: 0 auto;
     margin-top: 200px
 }
+.st-dtitle {
+    font-size: 1em;
+}
+.spacing {
+    margin-top: 35vh;
+}
 
 .lead {
     color: #242424;
 }
+
 /* main page */
-.save-margin{
-position: absolute;
-right: 10px;
+
+.save-margin {
+    position: absolute;
+    right: 10px;
 }
 
 #recent-project {
@@ -24,7 +32,7 @@ right: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
-#submit-line-break{
+#submit-line-break {
     margin-top: 20px;
 }
 
@@ -46,12 +54,13 @@ right: 10px;
 .open_project {
     width: 50%;
     margin: 0 auto;
-    padding: 30px;
+    padding: 10px;
 }
 
 .help {
     text-align: right;
     width: 50px;
+    padding: 5px;
 }
 
 h3 {
@@ -92,6 +101,7 @@ p {
 #insert_nav {
     margin-top: 10px;
 }
+
 .line-break {
     height: 1px;
     width: 100%;
@@ -105,18 +115,21 @@ p {
 h2 {
     font-size: 1.5em;
 }
+
 }
+
 .warning {
     color: red;
 }
+
 iframe {
     margin-top: 20px;
-        margin: 0 auto;
+    margin: 0 auto;
 }
 
 
 li {
-    margin-top: 5%;
+
 }
 
 nav-bar li {
@@ -140,21 +153,20 @@ nav-bar li {
 
 }
 
-#insert_nav {
-
-}
+#insert_nav {}
 
 .popup {
     width: 200px;
 }
+
 #tool_popup {
- display: none;
+    display: none;
     width: 100px;
 
 }
 
 #snippets_popup {
- display: none;
+    display: none;
     width: 100px;
 }
 
@@ -199,6 +211,7 @@ nav-bar li {
     width: 50px;
     padding-bottom: 20px;
 }
+
 .btn-light {
     width: 100%;
     display:
@@ -231,7 +244,7 @@ nav-bar li {
 
 .display-4 {
     font-size: 1.5em;
-    
+
 }
 
 #textbox {
@@ -243,12 +256,13 @@ nav-bar li {
     width: 90%;
     margin-top: 10px;
 }
+
 select,
 .form-control {
     display: inline;
 }
 
-#req_list{
+#req_list {
     padding: 10px;
     display: none;
 }
@@ -267,14 +281,12 @@ select {
 
 .nav-btn {
     margin-top: 20px;
-font-size: 12px;
+    font-size: 12px;
     margin: 10px;
     margin-bottom: 0px;
-}f
-
-.list-group {
-
 }
+
+f .list-group {}
 
 .tool_card h2 {
     padding: 5px 0px 5px 0px;
@@ -283,55 +295,61 @@ font-size: 12px;
     text-align: center;
     border: 1px solid;
 }
+
 .tool_card {
     height: 100px;
     padding: 10px;
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 
 
 #reference-hide {
     display: none;
 }
+
 .main_screen {
     height: 60vh;
-
+    margin-top: 10px;
     background-color: white;
     border: 3px black solid;
-        overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 br {
     line-height: 20px;
 }
-#fake_textarea{
-        width: 100%;
-  font-size: 12px;
-  background-image: linear-gradient(transparent, transparent 19px, #E7EFF8 0px);
-  background-size: 100% 20px;
-       padding: 12px 10px 5px 10px;
-background-attachment: local;
+
+#fake_textarea {
+    width: 100%;
+    font-size: 12px;
+    background-image: linear-gradient(transparent, transparent 19px, #E7EFF8 0px);
+    background-size: 100% 20px;
+    padding: 12px 10px 5px 10px;
+    background-attachment: local;
     resize: none;
     line-height: 20px;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 #urlInput {
     width: 70%;
 }
+
 .list-group {
     width: 100%;
 }
 
-#imageholder{
+#imageholder {
     min-height: 400px;
+    width: 100%;
     border: 1px solid black;
     margin: 20px;
 }
- #textbox {
+
+#textbox {
     height: 60vh;
 }
 
@@ -348,9 +366,11 @@ ul {
     font-size: 10px;
     padding: 5px;
 }
+
 .top {
-width: 100%;
+    width: 100%;
 }
+
 .word_tools {
     margin: 0px;
 }
@@ -366,13 +386,13 @@ width: 100%;
 .camera {
     height: 400px;
 
-    
 
-text-align: center;
+
+    text-align: center;
 }
 
 .camera img {
-        margin-top: 20px;
+    margin-top: 20px;
     height: 350px;
 
 }
@@ -385,4 +405,55 @@ text-align: center;
 
 #scan_thumb {
     padding: 15px;
+}
+
+/*  Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+.new_project .card, .open_project .card {
+        height: 200px;
+        font-size: 1.4em;
+        padding-top: 40px;
+    }
+    
+    .recent {
+        margin-top: 50px;
+    }
+    
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+    .new_project .card, .open_project .card {
+        height: 300px;
+        font-size: 2em;
+        padding-top: 90px;
+    }
+        .recent {
+        margin-top: 70px;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    
+a {font-size: 1.5em}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .navbar-brand {
+        background-color: yellow;
+    }
+    .navbar a {font-size: 2.5em;
+    margin: 0px 10px 0px 10px
+    padding: 0px;}
+}
 }
